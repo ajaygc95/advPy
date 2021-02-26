@@ -1,0 +1,19 @@
+
+
+1. Write a Temperature class to hold the data, partially listed below (see question 3), in a named tuple.
+ The class should contain a constructor and a Python standard string conversion function to convert a
+ Temperature class object to a string.
+
+2. Using your SQLite class, write a member function to support [square brackets] which returns the median data for a given year.
+ For example:
+
+ temperatureObject = Temperature()
+ temperatureObject[ 2017 ] = 123
+
+3. Write a Named Tuple to hold the data in the Temperature.csv (partially listed below).
+
+4. Using your Database class from Lab1, take the function outlined in Question3 and store the DataFrame data
+in your Sqlite Database. Assume the database has already been constructed and the Table initialized.
+
+
+5.Plot the data in your sqlite database from Question 4 using MatPlotLib.

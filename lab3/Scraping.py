@@ -1,0 +1,24 @@
+__author__ = "Ajay GC"
+import pandas as pd
+from DataBase import Database
+
+
+class Backend:
+    def __init__(self):
+        self.url = 'https://www.esrl.noaa.gov/gmd/aggi/aggi.html'
+
+    def parse(self):
+        database = Database()
+        database.createTable()
+        # database.delete_all_rows()
+        # dt = pd.read_html(self.url, attrs={'class': 'table table-bordered table-condensed table-striped table-header'})
+        dfs = pd.read_html(self.url, skiprows=range(3))
+        final_table = dfs[1]
+
+        for column, row in final_table.iterrows():
+            database.insert(int(row['Year']), float(row['CO2']), float(row['CH4']),float(row['N2O']) , float(row['CFC12']), float(row['CFC11']), float(row['15-minor']))
+            # print(row)
+
+
+backend = Backend()
+backend.parse()
