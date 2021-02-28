@@ -1,6 +1,6 @@
 __author__ = "Ajay GC"
 import pandas as pd
-from DataBase import Database
+from database import Database
 
 
 class Backend:
@@ -10,8 +10,6 @@ class Backend:
     def parse(self):
         database = Database()
         database.createTable()
-        # database.delete_all_rows()
-        # dt = pd.read_html(self.url, attrs={'class': 'table table-bordered table-condensed table-striped table-header'})
         dfs = pd.read_html(self.url, skiprows=range(3))
         final_table = dfs[1]
 

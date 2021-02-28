@@ -4,27 +4,27 @@ import sqlite3
 import threading
 from threading import Lock
 import time
-
 from matplotlib import pyplot as plt
 import numpy as np
 from sklearn.linear_model import LinearRegression
 
-from DataBase import Database
+from database import Database
 
 class Graph:
     def __init__(self):
-        self.database = Database()
+        self.threads = {}
 
     def plotGraph(self, key, lock):
         with lock:
+            database = Database()
             years = []
             value = []
             for year in range(1980,2019):
-                data = self.database.get_value(key,year)
+                data = database.get_value(key,year)
                 years.append(year)
                 value.append(data[0][0])
 
-            self.plotlinear(years,value,key)
+            self.threads[key] = [years,value]
 
     def plotlinear(self, a, b, key):
         model = LinearRegression()
@@ -47,27 +47,18 @@ if __name__ == "__main__":
     starttime1 = time.time()
     graph = Graph()
     lock = Lock()
-    t1 = threading.Thread(target=graph.plotGraph, args=('CO2', lock))
-    t2 = threading.Thread(target=graph.plotGraph, args=('CH4', lock))
-    t3 = threading.Thread(target=graph.plotGraph, args=('N2O', lock))
-    t4 = threading.Thread(target=graph.plotGraph, args=('CFC12', lock))
-    t5 = threading.Thread(target=graph.plotGraph, args=('CFC11', lock))
-    t6 = threading.Thread(target=graph.plotGraph, args=('minor15', lock))
+    columns = ['CO2', 'CH4', 'N2O', 'CFC12', 'CFC11', 'minor15']
+    thread_list = []
+    for col in columns:
+        t = threading.Thread(target=graph.plotGraph, args=(col,lock))
+        t.start()
+        thread_list.append(t)
 
-    t1.start()
-    t2.start()
-    t3.start()
-    t4.start()
-    t5.start()
-    t6.start()
+    for th in thread_list:
+        th.join()
 
-    t1.join()
-    t2.join()
-    t3.join()
-    t4.join()
-    t5.join()
-    t6.join()
-
-    print(time.time()-starttime1)
+    print(thread_list)
+    for item,value in graph.threads.items():
+        graph.plotlinear(value[0],value[1],item)
 
 
