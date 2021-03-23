@@ -1,0 +1,92 @@
+<Presidents>
+    <Rank>1</Rank>
+    <Name>George Washington</Name>
+    <Rank>2</Rank>
+    <Name>John Adams</Name>
+    <Rank>3</Rank>
+    <Name>Thomas Jefferson</Name>
+    <Rank>4</Rank>
+    <Name>James Madison</Name>
+    <Rank>5</Rank>
+    <Name>James Monroe</Name>
+    <Rank>6</Rank>
+    <Name>John Quincy Adams</Name>
+    <Rank>7</Rank>
+    <Name>Andrew Jackson</Name>
+    <Rank>8</Rank>
+    <Name>Martin Van Buren</Name>
+    <Rank>9</Rank>
+    <Name>William Henry Harrison</Name>
+    <Rank>10</Rank>
+    <Name>John Tyler</Name>
+    <Rank>11</Rank>
+    <Name>James K. Polk</Name>
+    <Rank>12</Rank>
+    <Name>Zachary Taylor</Name>
+    <Rank>13</Rank>
+    <Name>Millard Fillmore</Name>
+    <Rank>14</Rank>
+    <Name>Franklin Pierce</Name>
+    <Rank>15</Rank>
+    <Name>James Buchanan</Name>
+    <Rank>16</Rank>
+    <Name>Abraham Lincoln</Name>
+    <Rank>17</Rank>
+    <Name>Andrew Johnson</Name>
+    <Rank>18</Rank>
+    <Name>Ulysses S. Grant</Name>
+    <Rank>19</Rank>
+    <Name>Rutherford B. Hayes</Name>
+    <Rank>20</Rank>
+    <Name>James Garfield</Name>
+    <Rank>21</Rank>
+    <Name>Chester Arthur</Name>
+    <Rank>22</Rank>
+    <Name>Grover Cleveland</Name>
+    <Rank>23</Rank>
+    <Name>Benjamin Harrison</Name>
+    <Rank>24</Rank>
+    <Name>Grover Cleveland</Name>
+    <Rank>25</Rank>
+    <Name>William McKinley</Name>
+    <Rank>26</Rank>
+    <Name>Theodore Roosevelt</Name>
+    <Rank>27</Rank>
+    <Name>William Howard Taft</Name>
+    <Rank>28</Rank>
+    <Name>Woodrow Wilson</Name>
+    <Rank>29</Rank>
+    <Name>Warren G. Harding</Name>
+    <Rank>30</Rank>
+    <Name>Calvin Coolidge</Name>
+    <Rank>31</Rank>
+    <Name>Herbert Hoover</Name>
+    <Rank>32</Rank>
+    <Name>Franklin D. Roosevelt</Name>
+    <Rank>33</Rank>
+    <Name>Harry S. Truman</Name>
+    <Rank>34</Rank>
+    <Name>Dwight Eisenhower</Name>
+    <Rank>35</Rank>
+    <Name>John F. Kennedy</Name>
+    <Rank>36</Rank>
+    <Name>Lyndon B. Johnson</Name>
+    <Rank>37</Rank>
+    <Name>Richard Nixon</Name>
+    <Rank>38</Rank>
+    <Name>Gerald Ford</Name>
+    <Rank>39</Rank>
+    <Name>Jimmy Carter</Name>
+    <Rank>40</Rank>
+    <Name>Ronald Reagan</Name>
+    <Rank>41</Rank>
+    <Name>George Bush</Name>
+    <Rank>42</Rank>
+    <Name>Bill Clinton</Name>
+    <Rank>43</Rank>
+    <Name>George W. Bush</Name>
+    <Rank>44</Rank>
+    <Name>Barack Obama</Name>
+    <Rank>45</Rank>
+    <Name>Donald Trump</Name>
+</Presidents>

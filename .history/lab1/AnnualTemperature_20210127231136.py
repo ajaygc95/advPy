@@ -38,7 +38,7 @@ if __name__ == "__main__":
         x.append(row[0])
         y.append(row[1])
 
-    graph.plotGraph(x,y)
+    graph.thread_read(x, y)
 
     dt.delete_all_rows()
         

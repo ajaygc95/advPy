@@ -1,5 +1,14 @@
 import sqlite3
 
+# #De Anza College (Evaluations)
+# 21250 Stevens Creek Blvd.
+# Cupertino, Ca 95014
+
+# evaluationsda@fhda.edu
+
+
+
+
 class Database:
     def __init__(self):
         self.conn = sqlite3.connect('temperature.db')
